@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    user-select: none;
+}
+
+nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+nav a:hover::after {
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+nav .btnLogout-popup {
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+nav .btnLogout-popup:hover {
+    background-color: white;
+    color: #162938;
+}
+
+.main {
+    width: 80%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    align-content: flex-start;
+}
+
+.info {
+    color: white;
+    margin: 40px 0 15px 0;
+}
+
+.info span {
+    margin-right: 10px;
+}
+
+.keywords span {
+    color: white;
+}
+
+.keywords {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.btnTextareaUpload,
+.download-file,
+.delete-file {
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    /* margin-left: 40px; */
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.btnTextareaUpload {
+    width: 210px;
+}
+
+.download-file,
+.delete-file {
+    width: 190px;
+    margin-right: 40px;
+}
+
+.btnTextareaUpload:hover,
+.download-file:hover,
+.delete-file:hover {
+    background-color: white;
+    color: #162938;
+}
+
+.keywords span {
+    margin: 12px 10px 0 0;
+}
+
+#keywords-textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    line-height: 1.4;
+    width: 400px;
+}
+
+#keywords-textarea:hover {
+    cursor: pointer;
+}
+
+#keywords-textarea:focus-within {
+    box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+    border: none;
+}
